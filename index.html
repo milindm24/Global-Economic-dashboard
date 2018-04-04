@@ -2,16 +2,27 @@
 <html>
     <head>
         <title>Global Economic Dashboard</title>
-        <script src="ReadFile.js" type="text/javascript"></script>
-        <script src="https://cdn.rawgit.com/Gmousse/dataframe-js/master/dist/dataframe-min.js"></script>
+         <link href="style.css" rel="stylesheet" type="text/css"> 
     </head>
     <body>
         <h1>Welcome to Global Economic Dashboard</h1>
         <div><input id="csv" type="file" multiple> 
-        <button id="addFile" onclick="onAddFiles()"> ADD files </button></div>
+        <button id="addFile" onclick="onAddFiles()"> ADD files </button>
+        <button id="addFile" onclick="viewData()"> View Data </button></div>        
+        <div><output id="out">
+        </output></div>
+        <div class="leftnav">
 
-        <div><output id="out"></div>
-
-        </output>
+        </div>
+        <div class="tableContainer">
+            <table id="myTable" border=1>
+            </table>
+        </div>
+        
     </body>
+    <script src="variables.js" type="text/javascript"></script>        
+    <script src="loadHeader.js" type="text/javascript"></script>
+    <script src="ReadFile.js" type="text/javascript"></script>
+    <script src="https://cdn.rawgit.com/Gmousse/dataframe-js/master/dist/dataframe-min.js"></script>
+    <script src="readFileDF.js" type="text/javascript"></script>     
 </html>
